@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+    <nav id="navbar">
+      <header class="header-nav">Git Guide</header>
+      <ul>
+        <li><a class="nav-link" href="#Overview">Overview</a>
+        </li>
+        <li><a class="nav-link" href="#Git_Beginner's_Guide">Git Beginner's Guide</a></li>
+        <li><a class="nav-link" href="#What_is_Git?">What is Git?</a></li>
+        <li><a class="nav-link" href="#Install_Git">Install Git</a></li>
+        <li><a class="nav-link" href="#Creating_a_local_Git_repository">Creating a local Git repository</a></li>
+        <li><a class="nav-link" href="#Commiting_files_to_the_local_repository">Commiting files to the local repository</a></li>
+        <li><a class="nav-link" href="#Git_branches">Git branches</a></li>
+        <li><a class="nav-link" href="#Create_a_remote_repository">Create a remote repository</a></li>
+        <li><a class="nav-link" href="#Move_code_between_local_and_remote_repository">Move code between local and remote repository</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    </div>
+    <main id="main-doc">
+      <section class="main-section" id="Git_Beginner's_Guide">
+        <header class="title">Git Beginner's Guide</header>
+        <article>
+          <img src="https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/1579272099665-A4K0I1RYD12T6X5QXU4J/1_mSE6ialQ-9TcGUz5ts_FMA.png" class="center">
+          </article>
+      </section>
+      <section class="main-section" id="Overview">
+        <header>Overview</header>
+        <p>In this article, I will help you navigate using Git. Once you get the hang of it, it’ll be easy to use. Here’s an outline of the topics:</p>
+        <ul>
+          <li>What is Git?</li>
+          <li>Install Git</li>
+          <li>Creating a local Git repository</li>
+          <li>Commiting files to the local repository</li>
+          <li>Git branches</li>
+          <li>Create a remote repository</li>
+          <li>Move code between local and remote repository</li>
+        </ul>
+      </section>
+      <section class="main-section" id="What_is_Git?">
+          <header>What is Git?</header>
+          <article>
+            <p>Git is a distributed version control software that basically allows multiple people to work in parallel and it saves a history of all changes made. This will help ensure that there are no code conflicts as well as allow developers the ability to revert files or entire projects back to a previous version of their code.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Install_Git">
+        <header>Install Git</header>
+        <article>
+          <p>If you don’t have Git installed on your computer already, follow the instructions in the link below for help with installation.</p>
+          <p><a target="_blank" class="link" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"> https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></p>
+          <p>If you are not sure whether you have it, you can type the following in your terminal to see if it was installed.</p>
+          <code>git --version</code>
+          <p>Note: To use Git, Mac users will be using the terminal to interact. For Windows users, it will be the command prompt.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Creating_a_local_Git_repository">
+        <header>Creating a local Git repository</header>
+        <article>
+          <p>If you’re starting fresh with a brand new project, you will need to create a local Git repository. This is where your files and checkpoints of your changes will be stored to allow for versioning control.</p>
+          <p>Before you initialize you local repository, create a folder on your Desktop.</p>
+          <p>Now, open up your terminal (or Command Prompt). Copy the following commands below.</p>
+          <code>cd ~/Desktop/git-demo-example</code>
+          <code>git init</code>
+          <p>Line 1 will navigate to the folder we just created and line 2 will create our local repository.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Commiting_files_to_the_local_repository">
+        <header>Commiting files to the local repository</header>
+        <article>
+          <p>Now we will have to add files into the local repository in order to be able to start tracking the files and changes we make. This process of adding a file to a local repository is called committing.</p>
+          <p>It is a two step process in order for us to commit the code to the local repository. We will need to first add the file into a staging area and then commit. This extra step in the process gives you control over what files you actually want to commit to the local repository as well as allow you to change your mind if you accidentally choose the wrong file initially.</p>
+        <p>To add only a file to the staging area, you can use:</p>
+        <code>git add file-name</code>
+        <p>To commit the file, you will use:</p>
+        <code>git commit -m “My First Commit”</code>
+        <p>“My First Commit” can be any sort of comment you want to make about the code or about what changes you made.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Git_branches">
+        <header>Git branches</header>
+        <article>
+          <p>One really cool thing you can do with Git is that you can create different branches so that you can keep your work separate from the master branch. This is useful if you want to test code out.</p>
+          <p>Let’s create a new branch called test.</p>
+          <code>git branch test</code>
+          <p>To see what branch you are on, you can type git branch and the branch you are on will be highlighted in green.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Create_a_remote_repository">
+        <header>Create a remote repository</header>
+        <article>
+          <p>It’s great that you have saved all the changes in your local repository, but maybe you want to share it with your colleagues or with the world. We can create a remote repository and sync it with your local repository. That way, you can push changes to a central location where other people can access your code and they can help contribute as well.</p>
+          <p>There are several websites for hosting Git projects. In this example I will be using a website called Github.com. </p>
+          <ul>
+          <li>On the homepage, click Start a Project and create a repository.</li>
+          <li>After you’ve setup the repo, copy the url for your repository.</li>
+          </ul>
+          <p>Now, we need to tell our local repository where our remote repository is sitting in order to establish a link between the two. Replace the line of code below with your own repository url.</p>
+          <code>git remote add origin [repository url]</code>
+          <p>You’ll be asked to enter your Github username and password to be able to connect.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Move_code_between_local_and_remote_repository">
+        <header>Move code between local and remote repository</header>
+        <article>
+          <p>Now that a connection has been establish, to move all the code in your local repository to the remote repository, use:</p>
+          <code>git push -u origin master</code>
+          <p>With this line of code, everything from the master branch on our local repository is going to now also be in the remote repository. If you wish to push a different branch, just replace “master” with the name of your branch that you want to push.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <p>All the documentation in this page is taken from: <a target="blank" class="link" href="https://towardsdatascience.com/an-easy-beginners-guide-to-git-2d5a99682a4c">An Easy Beginner’s Guide to Git Part 1</a></p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
